@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+ 
+    function addClass(obj, cls) {
+      var classes = obj.className ? obj.className.split(' ') : [];
+    
+      for (var i = 0; i < classes.length; i++) {
+        if (classes[i] == cls) return; 
+      }
+    
+      classes.push(cls);
+    
+      obj.className = classes.join(' '); 
+    }
+    
+    var obj = {
+      className: 'class1'
+    };
+    
+    addClass(obj, 'class1');
+    addClass(obj, 'class2');
+    addClass(obj, 'class3');
+    alert(obj.className);
+  </script>
+</body>
+
+</html>
